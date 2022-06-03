@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  database:
+    image: postgres:14.3-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: hexagonal
+    ports:
+      - '5432:5432'
